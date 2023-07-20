@@ -11,7 +11,7 @@
 body{
     color: white;
     background: black;
-    height: 100vh;
+    /* height: 100vh; */
     
 }
 body::-webkit-scrollbar {
@@ -1101,14 +1101,35 @@ tr:last-child td{
         .padre-productos-and-btn{
             width: 100%;
         }
+        .producto-img{
+            height: 600px;
+        }
         .grid-productos{
             grid-template-columns: repeat(3,1fr);
         
+        }
+        .items{
+            height: 100%;
+        }
+        .botones{
+            height: 200px;
+        }
+        .botones p{
+        font-size: 13px;
+        font-weight: 500;
+
+        }
+        .botones-G{
+            flex-direction: column;
+            width: 40%;
+            gap: 3px;
+            padding: 5px;
         }
         .botones-P{
             row-gap: 12px;
         }
         .btn-cart, .btn-cerrar {
+            width: 100%;
             margin: 0;
         }
     }
