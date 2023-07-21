@@ -6,6 +6,26 @@
     <link rel="shortcut icon" href="/Cpts/imagen/logo-blanco.png" type="image/x-icon">
     <title>ShadowSell Iniciar</title>
 </head>
+<head>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lcdwj0nAAAAAODMfmQ3xyvDmcL5zZxILQuBt59P"></script>
+    ...
+    </head>
+    
+    <script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6Lcdwj0nAAAAAODMfmQ3xyvDmcL5zZxILQuBt59P', {action: 'LOGIN'});
+        // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+        // reCAPTCHA Enterprise to the end user's browser.
+        // This token must be validated by creating an assessment.
+        // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
+      });
+    }
+    </script>
+
+
+    
 <body>
     
     <section class="form-main">
@@ -25,7 +45,7 @@
                             <a href="/login/recuperar.html" class="grandient-text">Has olvidado tu contraseña</a>
                         </div>
                     </div>
-                    <button onclick=""  type="submit" id="btn_init" class="btn">Iniciar Sesión</button>
+                    <button onclick="onClick()" type="submit" id="btn_init" class="btn">Iniciar Sesión</button>
                 </form>
                 <p>No tienes una cuenta? <a href="/register/registrarse.html" class="grandient-text">Crear cuenta</a></p>
             </div>

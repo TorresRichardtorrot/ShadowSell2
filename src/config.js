@@ -4,7 +4,7 @@ dotenv.config()
 
 
 const PORT = process.env.PORT;
-const HOST = 'https://shadowsell-wpre.onrender.com';
+const HOST = 'https://shadowsell.onrender.com';
 const PAYPAL_KEY_CLIENT=process.env.PAYPAL_KEY_CLIENT;
 const PAYPAL_KEY_SECRET=process.env.PAYPAL_KEY_SECRET;
 const PAYPAL_API='https://api-m.sandbox.paypal.com'
