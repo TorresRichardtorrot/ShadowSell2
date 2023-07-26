@@ -295,8 +295,4 @@ router.post('/actualizarP', async (req, res) => {
   }
 });
 
-
-
-
-
 module.exports = router;
