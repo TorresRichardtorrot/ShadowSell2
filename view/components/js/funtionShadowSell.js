@@ -879,7 +879,7 @@ async function verificarUsuario(clave) {
     } else if (mensaje === "La contraseña es válida") {
       console.log('lo hiciste bien');
       cambiarModo2(false)
-      cambiarActivo2()
+      cambiarActivo2(true)
       
     }
   } catch (error) {
@@ -908,9 +908,8 @@ async function cambiarModo2(modo){
 }
 
 
-async function cambiarActivo2() {
+async function cambiarActivo2(activo) {
   try {
-    const activo = true;
     await fetch(`${ruta}/usersID/${correo}`, {
       method: 'PUT',
       headers: {
