@@ -8,16 +8,16 @@ const side_menu = document.getElementById('menu_side');
 const body = document.getElementById('body');
 const main = document.querySelector('#main');
 var alert;
+
 // seleectores de botones
 const btnIrAShadow =document.querySelector('#ir_Aapp')
 const btnStadisticas = document.querySelector('#balance_venta');
 const btnProducto = document.querySelector('#Producto');
 const btnNuevoP = document.querySelector('#nuevo_producto');
-const btn_open = document.getElementById('btn_open');
 const seleccionado = document.querySelector('.seleccionado');
 const btnCerrarSeccion = document.querySelector('#cerrar_seccion')
-var btnGuardar;
-var btnEliminar;
+
+var btnGuardar,btnEliminar;
 var tipoChart ="bar"
 
 // Eventos
@@ -33,7 +33,7 @@ btnStadisticas.addEventListener('click',()=>{
     btnNuevoP.classList.remove('seleccionado')
     estadisticas()
 })
-document.getElementById('btn_open').addEventListener('click', openOrCloseMenu);
+btn_open.addEventListener('click', openOrCloseMenu);
 
 if (window.innerWidth < 760) {
     body.classList.add('body_move');
@@ -210,6 +210,7 @@ function cargarProductosDesdeAPI() {
             .then(response => response.json())
             .then(data => {
                 data.forEach(objeto => {
+                    
                     const nameP = objeto.name;
                     const categoria = objeto.descripción;
                     const precioP = objeto.precio;

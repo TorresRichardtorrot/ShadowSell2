@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html  lang="es">
-    
-
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/Cpts/css/ShadowSell.css">
@@ -19,32 +17,32 @@
             <div class="box-precio">
                 <div class="precio-p">
                     <p>Empresa: ShadowSell </p>
-                    <div style="display: flex;">
-                        <p>Fecha:</p><div id="pDeFecha"></div>
+                        <div style="display: flex;">
+                            <p>Fecha:</p><div id="pDeFecha"></div>
                         </div>
                     <div style="display: flex;">
-                    <p>Hora:</p><div id="pDeHora"></div>
+                        <p>Hora:</p><div id="pDeHora"></div>
                     </div>
                     <p>Cajero: 1</p>
                 </div>
                 <div class="container-precio">
                     <div class="flex 1">
                         <p>Iva</p>
-                        <div id="iva">16%</div>
+                        <span id="iva">16%</span>
                     </div>
                     <div class="flex 2">
                         <p>Total en Bs</p>
-                        <div id="total-bs">0.00</div>
+                        <span id="total-bs">0.00</span>
                     </div>
                     <div class="flex 3">
                         <p>Total en $</p>
-                        <div id="total-dolares" style="color: rgb(7, 196, 7);">0.00</div>
+                        <span id="total-dolares" style="color: rgb(7, 196, 7);">0.00</span>
                     </div>
                 </div>
             </div>
         </div>
                 <!-- segunda seccion -->
-        <div class="container-taza">
+        <section class="container-taza">
                 <div id="memorias">
                     <strong style="display: none;">Si no pierdes, no puedes disfrutar de las victorias </strong>
                     <strong style="display: none;">El único modo de hacer un gran trabajo es amar lo que haces</strong>
@@ -64,9 +62,9 @@
                     <input type="button" value="Dolar">
                     <div id="taza-del-dia"><div class="TAZA">TIPO DE CAMBIO: <strong id="dolar_input">0.00</strong> Bs X $</div></div> 
                 </div>
-        </div>
+        </section>
                 <!-- tercera seccion -->
-        <div class="padre-venta">
+        <section class="padre-venta">
             <div class="busqueda-producto">
                 <div class="buscador">
                     <img src="/Cpts/imagen/lupa.svg" alt="">
@@ -96,17 +94,17 @@
                 <div class="items">
                     <div class="flex">
                         <p>Items Totales</p>
-                        <div id="intems_totales">0.00</div>
+                        <span id="intems_totales">0.00</span>
                     </div>
                     <div class="flex">
                         <p>Productos Totales</p>
-                        <div id="productos_totales">0.00</div>
+                        <span id="productos_totales">0.00</span>
                     </div>
                 </div>
             </div>
 
             <!-- +++/* tercer seccion 1.2 */+++ -->
-            <div class="padre-productos-and-btn" >
+            <section class="padre-productos-and-btn" >
             
                 <!-- **** AQUI VOY A COLOCAR LOS PRODUCTOS QUE CREE Y LOS VOY A PODER BUSCAR **** -->
 
@@ -121,7 +119,9 @@
                 <div class="producto-img">
 
                     <div id="lista-items" class="grid-productos">
-                            <!-- Aqui se cargan los producto -->
+
+                            <!-- ***Aqui se cargan los producto*** -->
+
                     </div>
                     
                 </div>
@@ -135,10 +135,8 @@
                                     
                                     <input type="checkbox"  id="checkPassword" class="checkbox-original">
                                     <label for="checkPassword" class="checkbox-personalizado">
-    
                                         <ion-icon name="eye-outline" class="icono-normal"></ion-icon>
                                         <ion-icon name="eye-off-outline" class="icono-seleccionado"></ion-icon>
-    
                                      </label>
                                  </div>
                                 <div>
@@ -150,7 +148,7 @@
 
                     <div class="botones-P">
                         <div>
-                            <button id="Cantidad-btn"  >
+                            <button id="Cantidad-btn" title="Cantidad" >
                             <div class="btns-opciones">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-123" viewBox="0 0 16 16">
                                     <path d="M2.873 11.297V4.142H1.699L0 5.379v1.137l1.64-1.18h.06v5.961h1.174Zm3.213-5.09v-.063c0-.618.44-1.169 1.196-1.169.676 0 1.174.44 1.174 1.106 0 .624-.42 1.101-.807 1.526L4.99 10.553v.744h4.78v-.99H6.643v-.069L8.41 8.252c.65-.724 1.237-1.332 1.237-2.27C9.646 4.849 8.723 4 7.308 4c-1.573 0-2.36 1.064-2.36 2.15v.057h1.138Zm6.559 1.883h.786c.823 0 1.374.481 1.379 1.179.01.707-.55 1.216-1.421 1.21-.77-.005-1.326-.419-1.379-.953h-1.095c.042 1.053.938 1.918 2.464 1.918 1.478 0 2.642-.839 2.62-2.144-.02-1.143-.922-1.651-1.551-1.714v-.063c.535-.09 1.347-.66 1.326-1.678-.026-1.053-.933-1.855-2.359-1.845-1.5.005-2.317.88-2.348 1.898h1.116c.032-.498.498-.944 1.206-.944.703 0 1.206.435 1.206 1.07.005.64-.504 1.106-1.2 1.106h-.75v.96Z"/>
@@ -159,26 +157,29 @@
                         </button><br><p>Cantidad</p>
                      </div>
                         <div>
-                            <button id="vaciar-compras">
+                            <button id="vaciar-compras" title="vaciar lista de compra">
                                 <div class="btns-opciones">
                                <img src="/Cpts/imagen/basura.svg" alt="Vaciar compras">
                                 </div>
                             </button><br><p>Eliminar</p>
                         </div>
                         <div>
-                            <button onclick="redirigirAPagina()">
+                            <button onclick="redirigirAPagina()" title="Ir al admin">
                             <div class="btns-opciones">
                                 <img src="/Cpts/imagen/user.svg" alt="Panel de admin">
                             </div>
                         </button><br> <p>admin</p>
                     </div>
-                    <div><button onclick="cambiarContenido()">
+                    <div>
+                        <button onclick="cambiarContenido()" title="Cambia el precio del dolar">
                         <div class="btns-opciones">
                             <img src="/Cpts/imagen/cambiarD.svg" alt="Cambio del precio del dollar">
                         </div>
-                    </button><br> <p>Dollar</p></div>
+                    </button><br> <p>Dollar</p>
+                </div>
 
-                    <div><button id="fullscreen-btn" onclick="toggleFullScreen()">
+                    <div>
+                        <button id="fullscreen-btn" onclick="toggleFullScreen()" title="Pantalla completa">
                         <div class="btns-opciones">
                        <img src="/Cpts/imagen/fullscreen.svg" alt="Pantalla completa">
                     </div></button><br> <p>
@@ -186,7 +187,7 @@
                 </div>
 
                         <div>
-                            <button id="btn-calculadora">
+                            <button id="btn-calculadora" title="Calculadora">
                                 <div class="btns-opciones">
                                     <img src="/Cpts/imagen/calculadora.svg" alt="Calculadora">
                                 </div>
@@ -194,34 +195,36 @@
                             <br> <p>Calculadora</p></div>
 
                         <div>
-                            <button id="btn-reproductor">
+                            <button id="btn-reproductor" title="Reproductor">
                                 <div class="btns-opciones">
                                     <img src="/Cpts/imagen/musica.svg" alt="reproductor">
                                 </div>
                             </button>
                             <br> <p>Reproductor</p>
                         </div>
-                        <div><button>
+                        <div>
+                            <button title="Cambiar color de fondo"> 
                             <input type="color" name="body" id="color_body">
-                        </button><br> <p>Tema</p></div>
+                        </button><br> <p>Tema</p>
+                    </div>
                        
                     </div>
                     <div class="botones-G">
                         <button onclick="generarFactura()"  title="Haz clic aquí para procesar venta" class="btn-cart"><i class='bx bx-cart'></i></button>
 
-                        <button  title="Haz clic aquí para cerrar todo" class="btn-cerrar"><i class='bx bx-power-off'></i></button> 
+                        <button  title="Haz clic aquí para cerrar todo" class="btn-cerrar" id="cerrar_todo"><i class='bx bx-power-off'></i></button> 
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </section>
         <div  id="reproductor" class="ventana2 oculto">
-            <img src="/Cpts/imagen/move.svg" alt=""> 
+            <img src="/Cpts/imagen/move.svg" alt="Facturar"> 
           <audio controls class="input-musica"  id="musica2" src=""></audio>
         </div>
 
         <div class="ventana oculto"  id="ventana-Calculadora">
 
-            <div class="calculadora " >
+            <div class="calculadora">
     
                 <div class="pantalla">0</div>
         
@@ -289,8 +292,8 @@
 
     </section>
     <script src="/Cpts/js/funtionShadowSell.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
 </body>
 <div class="lds-ring"><div></div><div></div><div></div><div></div>
 </html>

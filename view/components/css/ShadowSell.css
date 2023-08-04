@@ -12,6 +12,7 @@ body{
     color: white;
     background: black;
     /* height: 100vh; */
+    /* font-size: 16px; */
     
 }
 body::-webkit-scrollbar {
@@ -124,7 +125,7 @@ body::-webkit-scrollbar-track-piece{
 }
 .precio-p{
     margin: 10px 10px 0px 0px;
-    font-size: 13px;
+    font-size: .9rem;
     font-weight: 500;
 
 }
@@ -176,17 +177,17 @@ body::-webkit-scrollbar-track-piece{
 }
 #taza-del-dia{
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: .8rem;
 }
 .factura-container {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 .factura-container #factura{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     text-shadow: 1px 1px 0.5px  rgba(255, 255, 255, 0.596);
     color: red;
@@ -259,7 +260,7 @@ body::-webkit-scrollbar-track-piece{
 }
 .articulos{
     font-family: 'Montserrat', sans-serif;
-    font-size: 9px;
+    font-size: .6rem;
     margin: 5px;
     border: solid 2px black;
     height: 350px;
@@ -311,7 +312,7 @@ tr{
     text-align: center;
 }
 td{
-    font-size: 12px;
+    font-size: .8rem;
     padding: 0px 2px;
     border: 1px solid black;
     border-left: 0; 
@@ -429,7 +430,7 @@ tr:last-child td{
     }
     .grid-productos{
         
-        font-size: 13px;
+        font-size: .8rem;
         display: grid;
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: auto;
@@ -570,7 +571,7 @@ tr:last-child td{
         grid-template-rows: 1fr 1fr;
         text-align: center;
         font-family: 'Montserrat', sans-serif;
-        font-size: 10px;
+        font-size: .7rem;
         font-weight: lighter;
     }
     .botones-P div button{
@@ -581,7 +582,7 @@ tr:last-child td{
         width: 90%;
         height: 70%;
         border-radius: 2.5px;
-        font-size: 10px;
+        font-size: .7rem;
         border: solid 1px black;
     }
     .botones-P div button:hover{
@@ -773,7 +774,7 @@ tr:last-child td{
           }
           
           .checkbox-personalizado ion-icon {
-            font-size: 20px;
+            font-size: 1.4rem;
             line-height: 1;
             text-align: center;
             color: #000;
@@ -797,10 +798,7 @@ tr:last-child td{
             padding: 4px 0px;
             font-weight: 500;
           }
-          
-
-
-
+        
           /* *** Calculadora *** */
 
           .ventana {
@@ -929,7 +927,7 @@ tr:last-child td{
             border: none;
             color: #FFFFFF;
             text-align: center;
-            font-size: 18px;
+            font-size: 1.2rem;
             padding: 10px ;
             width: 110px;
             transition: all 0.5s;
@@ -972,7 +970,7 @@ tr:last-child td{
             border: none;
             color: #FFFFFF;
             text-align: center;
-            font-size: 18px;
+            font-size: 1.2rem;
             padding: 10px;
             width: 100px;
             transition: all 0.5s;
@@ -1051,7 +1049,7 @@ tr:last-child td{
 
     }
     #memorias{
-        width: 650px;
+        width: 100%;
     }
     .factura-container{
         margin-top: 15px;
@@ -1070,6 +1068,9 @@ tr:last-child td{
         grid-template-columns: repeat(3,1fr);
     
     }
+    .box-articulos{
+        background-position: center;
+    }
     .items{
         height: 100%;
     }
@@ -1077,7 +1078,7 @@ tr:last-child td{
         height: 200px;
     }
     .botones p{
-    font-size: 13px;
+    font-size: .7rem;
     font-weight: 500;
 
     }

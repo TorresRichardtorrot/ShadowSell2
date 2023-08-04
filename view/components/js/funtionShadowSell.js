@@ -31,6 +31,7 @@ const botones = document.querySelectorAll(".btn");
 const bodyColor = document.querySelector('#color_body');
 var bodyC = document.querySelector('.padre')
 const btnChecked = document.querySelector('#checkPassword')
+const cerrarApp = document.querySelector('#cerrar_todo')
 
 var offsetX = 0;
 var offsetY = 0;
@@ -73,19 +74,19 @@ async function validarModo() {
                 loading.style.display="none";
               }, 2000);
           } else {
-            window.location.href ="http://localhost:3000/"
+            window.location.href ="/"
           }
         } catch (error) {
           console.error('Ocurrió un error al validar el campo activo:', error);
-          window.location.href ="http://localhost:3000/"
+          window.location.href ="/"
         }
   }else{
-      window.location.href ="http://localhost:3000/"
+      window.location.href ="/"
   }
   
 }
 
-//esta funcion me permite llamar a la base de datos para obtener el numero de facturas generadas
+//?esta funcion me permite llamar a la base de datos para obtener el numero de facturas generadas
 llamarApiVentas()
 async function llamarApiVentas() {
   try {
@@ -877,7 +878,7 @@ async function verificarUsuario(clave) {
       console.log('revisa la contraseña');
     } else if (mensaje === "La contraseña es válida") {
       console.log('lo hiciste bien');
-      cambiarModo2()
+      cambiarModo2(false)
       cambiarActivo2()
       
     }
@@ -888,10 +889,10 @@ async function verificarUsuario(clave) {
 }
 
 
-async function cambiarModo2(){
+async function cambiarModo2(modo){
 
   try {
-    const modo = false;
+    
     await fetch(`${ruta}/usersModoID/${correo}`, {
       method: 'PUT',
       headers: {
@@ -902,7 +903,7 @@ async function cambiarModo2(){
 
       
   } catch(error) {
-    
+    console.error(error)
   }
 }
 
@@ -920,7 +921,7 @@ async function cambiarActivo2() {
 
     window.location.href = '/admin/';
   } catch(error) {
-    
+    console.error(error)
   }
 }
 
@@ -975,6 +976,20 @@ btnChecked.addEventListener('change', (event) => {
     password.type = 'password';
   }
 });
+
+cerrarApp.addEventListener('click',()=>{
+  cerrarTodo()
+} )
+
+function cerrarTodo(){
+try {
+  cambiarModo2(false)
+} catch (error) {
+  console.error(error)
+}
+localStorage.removeItem('email');
+window.location.href = '/';
+}
 
 enviarPassword.addEventListener('click',(e)=>{
  e.preventDefault();
