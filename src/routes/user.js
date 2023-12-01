@@ -220,7 +220,7 @@ router.post('/user/enviar', async (req, res) => {
         secure: true,
         auth: {
           user: "torresdrichar@gmail.com",
-          pass:"gtyueellicrdqslx"
+          pass:procces.env.PASS_GMAIL
         }
       });
 
